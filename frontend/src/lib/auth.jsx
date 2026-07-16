@@ -29,8 +29,9 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     const { data } = await api.post('/auth/login', { email, password });
     localStorage.setItem('ks_token', data.access_token);
-    setUser(data.user);
-    return data.user;
+    // Fetch full user (with package_info for students)
+    const full = await fetchMe();
+    return full || data.user;
   };
 
   const logout = () => {
