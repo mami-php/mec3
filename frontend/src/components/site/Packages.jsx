@@ -2,10 +2,24 @@ import React, { useState } from 'react';
 import { Check, ArrowRight, Star } from 'lucide-react';
 import { Button } from '../ui/button';
 import { EXAM_TABS, PACKAGES } from '../../mock';
+import { useSiteCollection } from '../../lib/cms';
 
 const Packages = () => {
   const [active, setActive] = useState('YKS');
-  const packs = PACKAGES[active] || [];
+  const { items } = useSiteCollection('/site/packages');
+  // If CMS has packages, show them all (grouped by exam is not part of MVP CMS)
+  const cmsPacks = items.map((p) => ({
+    name: p.name,
+    subtitle: p.description || `${p.duration_days} gün`,
+    priceOld: null,
+    price: p.price?.toLocaleString('tr-TR') || '0',
+    unit: `₺ / ${p.duration_days} gün`,
+    features: p.features || [],
+    cta: 'Paketi Al',
+    accent: !!p.accent,
+    badge: p.badge || null,
+  }));
+  const packs = items.length > 0 ? cmsPacks : (PACKAGES[active] || []);
 
   return (
     <section id="deneme" className="relative py-24 lg:py-32 bg-ink-2/40 border-y border-white/5">

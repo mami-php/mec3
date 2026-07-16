@@ -6,7 +6,7 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException
 
 from database import db
-from models import StudySessionStart, StudySessionStop
+from models import StudySessionStart, StudySessionStop, StudentTaskCreate
 from security import require_role
 
 router = APIRouter(prefix='/student', tags=['student'], dependencies=[Depends(require_role('student'))])
@@ -22,16 +22,16 @@ def _monday(d: datetime) -> datetime:
 
 
 @router.get('/plan')
-async def weekly_plan(week: Optional[str] = None, user=Depends(require_role('student'))):
+async def weekly_plan(user=Depends(require_role('student'))):
+    """Student only sees the CURRENT week (Mon-Sun). No navigation."""
     now = datetime.utcnow()
-    base = datetime.strptime(week, '%Y-%m-%d') if week else _monday(datetime(now.year, now.month, now.day))
-    d0 = _monday(base)
+    today = datetime(now.year, now.month, now.day)
+    d0 = _monday(today)
     days = []
     for i in range(7):
         d = d0 + timedelta(days=i)
         ds = d.strftime('%Y-%m-%d')
         tasks = await db.tasks.find({'student_id': user['id'], 'day_date': ds}, {'_id': 0}).sort('created_at', 1).to_list(200)
-        # session totals for the day
         d1 = d + timedelta(days=1)
         day_sec = 0
         async for row in db.study_sessions.aggregate([
@@ -40,7 +40,46 @@ async def weekly_plan(week: Optional[str] = None, user=Depends(require_role('stu
         ]):
             day_sec = row['total']
         days.append({'date': ds, 'tasks': tasks, 'study_seconds': day_sec})
-    return {'week_start': d0.strftime('%Y-%m-%d'), 'days': days}
+    return {'week_start': d0.strftime('%Y-%m-%d'), 'days': days, 'today': today.strftime('%Y-%m-%d')}
+
+
+@router.post('/tasks')
+async def create_own_task(payload: StudentTaskCreate, user=Depends(require_role('student'))):
+    """Student can add own personal tasks. Restricted to current week only."""
+    # Validate day_date is within current week
+    try:
+        d = datetime.strptime(payload.day_date, '%Y-%m-%d')
+    except ValueError:
+        raise HTTPException(400, 'Geçersiz tarih')
+    now = datetime.utcnow()
+    today = datetime(now.year, now.month, now.day)
+    d0 = _monday(today)
+    d1 = d0 + timedelta(days=7)
+    if not (d0 <= d < d1):
+        raise HTTPException(400, 'Sadece bu hafta içine görev ekleyebilirsin')
+
+    doc = payload.model_dump()
+    doc['id'] = str(uuid.uuid4())
+    doc['student_id'] = user['id']
+    doc['mentor_id'] = user.get('mentor_id')
+    doc['created_by'] = 'student'
+    doc['created_at'] = datetime.utcnow()
+    doc['completed'] = False
+    await db.tasks.insert_one(doc)
+    doc.pop('_id', None)
+    return doc
+
+
+@router.delete('/tasks/{tid}')
+async def delete_own_task(tid: str, user=Depends(require_role('student'))):
+    """Student can only delete tasks they created themselves."""
+    task = await db.tasks.find_one({'id': tid, 'student_id': user['id']})
+    if not task:
+        raise HTTPException(404, 'Görev bulunamadı')
+    if task.get('created_by') != 'student':
+        raise HTTPException(403, 'Mentor tarafından atanan görevleri silemezsin')
+    await db.tasks.delete_one({'id': tid})
+    return {'ok': True}
 
 
 @router.post('/tasks/{tid}/toggle')

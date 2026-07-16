@@ -162,6 +162,7 @@ async def create_task(payload: TaskCreate, user=Depends(require_role('mentor')))
     doc = payload.model_dump()
     doc['id'] = str(uuid.uuid4())
     doc['mentor_id'] = user['id']
+    doc['created_by'] = 'mentor'
     doc['created_at'] = datetime.utcnow()
     doc['completed'] = False
     await db.tasks.insert_one(doc)

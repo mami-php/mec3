@@ -273,6 +273,78 @@ backend:
         agent: "testing"
         comment: "Package expiration logic working perfectly. After admin cancels package, GET /auth/me returns package_info.status='expired'. POST /student/sessions/start correctly returns 403 with message 'Paket süreniz sona ermiş'. After admin extends package, student can start sessions again. All blocking and unblocking tested successfully."
 
+  - task: "Public CMS endpoints"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/cms.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "All public CMS endpoints working correctly. GET /api/site/content returns object with general, header, hero, footer keys. GET /api/site/mentors returns 8 seeded landing mentors. GET /api/site/testimonials returns 6 seeded testimonials. GET /api/site/faqs returns 3 seeded FAQ groups. GET /api/site/packages returns 4 seeded landing packages. All endpoints accessible without authentication."
+
+  - task: "Admin CMS content sections"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/cms.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Admin CMS content management working perfectly. GET /api/admin/cms/content returns full content with admin token. Non-admin (student) access correctly returns 403. PUT /api/admin/cms/content/general successfully updates general section (tested with site_name='TEST SITE'). PUT /api/admin/cms/content/hero successfully updates hero section (tested with eyebrow='TEST EYEBROW'). Public GET /api/site/content correctly reflects updates. PUT to invalid section returns 400 error. Content reverted to original values successfully."
+
+  - task: "Admin CMS mentors CRUD"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/cms.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Admin CMS mentors CRUD fully functional. GET /api/admin/cms/mentors returns list of mentors. POST creates new mentor with id. PATCH updates mentor fields (tested name update to 'Updated Mentor'). Public GET /api/site/mentors shows new mentor with updated name. PATCH is_active=false hides mentor from public list. DELETE removes mentor successfully. All operations tested and working."
+
+  - task: "Admin CMS testimonials CRUD"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/cms.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Admin CMS testimonials CRUD working correctly. POST /api/admin/cms/testimonials creates testimonial with id. PATCH updates testimonial fields (tested text update). DELETE removes testimonial successfully. All CRUD operations tested and functional."
+
+  - task: "Admin CMS FAQs CRUD"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/cms.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Admin CMS FAQs CRUD working correctly. POST /api/admin/cms/faqs creates FAQ group with id. PATCH updates FAQ fields (tested title update). DELETE removes FAQ successfully. All CRUD operations tested and functional."
+
+  - task: "Student plan updates (this-week-only restriction)"
+    implemented: true
+    working: true
+    file: "/app/backend/routes/student.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "Student plan updates working perfectly. GET /api/student/plan returns week_start (Monday of current week), days array of 7, and today key with YYYY-MM-DD format. No week query param support (current week only). POST /api/student/tasks with today's date creates personal task with created_by='student'. POST with past week date (7 days ago) correctly returns 400 'Sadece bu hafta içine görev ekleyebilirsin'. POST with next week date (8+ days ahead) correctly returns 400 'Sadece bu hafta içine görev ekleyebilirsin'. Personal tasks appear in plan with created_by='student'. Mentor tasks appear with created_by='mentor'. DELETE /api/student/tasks/{personal_task_id} works. DELETE /api/student/tasks/{mentor_task_id} correctly returns 403 'Mentor tarafından atanan görevleri silemezsin'. All date validation and task ownership logic working correctly."
+
 frontend:
   - task: "Frontend UI (not tested)"
     implemented: true
@@ -289,7 +361,7 @@ frontend:
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 1
+  test_sequence: 2
   run_ui: false
 
 test_plan:
@@ -301,3 +373,5 @@ test_plan:
 agent_communication:
   - agent: "testing"
     message: "Comprehensive backend API testing completed. All 5 test groups passed (AUTH, ADMIN, MENTOR, STUDENT, PACKAGE_EXPIRATION). Total 45+ individual test cases executed successfully. All endpoints working correctly with proper authentication, authorization, data validation, and business logic. No critical issues found. Backend is production-ready."
+  - agent: "testing"
+    message: "NEW CMS and Student plan update testing completed successfully. All 6 test groups passed (PUBLIC_CMS, ADMIN_CMS_CONTENT, ADMIN_CMS_MENTORS, ADMIN_CMS_TESTIMONIALS, ADMIN_CMS_FAQS, STUDENT_PLAN_UPDATES). Total 37 individual test cases executed. All new CMS endpoints working correctly: public site content accessible without auth, admin CMS CRUD operations (content sections, mentors, testimonials, FAQs) working with proper authorization. Student plan updates working perfectly: this-week-only restriction enforced, personal task creation/deletion with created_by validation, date validation for past/future weeks. No critical issues found. All new features production-ready."

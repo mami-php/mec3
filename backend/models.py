@@ -80,6 +80,10 @@ class PackageBase(BaseModel):
     description: Optional[str] = None
     features: List[str] = []
     is_active: bool = True
+    is_landing: bool = True  # show on public landing page
+    sort_order: int = 100
+    badge: Optional[str] = None  # e.g. 'Popüler', 'Avantaj Paketi'
+    accent: bool = False
 
 
 class PackageCreate(PackageBase):
@@ -93,6 +97,10 @@ class PackageUpdate(BaseModel):
     description: Optional[str] = None
     features: Optional[List[str]] = None
     is_active: Optional[bool] = None
+    is_landing: Optional[bool] = None
+    sort_order: Optional[int] = None
+    badge: Optional[str] = None
+    accent: Optional[bool] = None
 
 
 # ---------- Assign Package ----------
@@ -117,6 +125,16 @@ class TaskCreate(BaseModel):
     topic: Optional[str] = None
     description: Optional[str] = None
     task_type: str = 'test'  # test | konu | tekrar | okuma | ödev
+    target_qcount: Optional[int] = None
+    target_duration_min: Optional[int] = None
+
+
+class StudentTaskCreate(BaseModel):
+    day_date: str
+    subject: str
+    topic: Optional[str] = None
+    description: Optional[str] = None
+    task_type: str = 'test'
     target_qcount: Optional[int] = None
     target_duration_min: Optional[int] = None
 

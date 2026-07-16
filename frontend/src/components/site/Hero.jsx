@@ -5,10 +5,22 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { HERO } from '../../mock';
+import { useSiteContent } from '../../lib/cms';
 
 const badgeIcon = { Users, CalendarClock, PackageOpen, MonitorPlay, MessageSquare };
 
 const Hero = () => {
+  const { content } = useSiteContent();
+  const hero = { ...HERO, ...(content.hero || {}) };
+  // Support both mock keys and CMS keys
+  const eyebrow = hero.eyebrow;
+  const titleGold = hero.title_gold || hero.titleGold;
+  const titleWhite = hero.title_white || hero.titleWhite;
+  const subtitle = hero.subtitle;
+  const primaryCta = hero.primary_cta || hero.primaryCta;
+  const secondaryCta = hero.secondary_cta || hero.secondaryCta;
+  const stats = hero.stats?.length ? hero.stats : HERO.stats;
+
   const [c1, c2, c3, c4, c5] = HERO.champions;
 
   return (
@@ -24,20 +36,20 @@ const Hero = () => {
           <div className="lg:col-span-6 xl:col-span-7">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs font-semibold tracking-wider uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-              {HERO.eyebrow}
+              {eyebrow}
             </div>
 
             <h1 className="mt-6 font-display font-black leading-tr text-white">
               <span className="block text-[40px] sm:text-[56px] lg:text-[68px] xl:text-[82px] leading-[0.95] tracking-tight">
-                <span className="gold-text italic">{HERO.titleGold}</span>
+                <span className="gold-text italic">{titleGold}</span>
               </span>
               <span className="block relative mt-1 text-[34px] sm:text-[48px] lg:text-[58px] xl:text-[72px] leading-[0.95] tracking-tight">
-                <span className="swash-underline">{HERO.titleWhite}</span>
+                <span className="swash-underline">{titleWhite}</span>
               </span>
             </h1>
 
             <p className="mt-7 text-base sm:text-lg text-white/70 max-w-xl">
-              {HERO.subtitle}
+              {subtitle}
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
@@ -45,7 +57,7 @@ const Hero = () => {
                 size="lg"
                 className="h-12 px-6 bg-gold hover:bg-gold-light text-ink font-semibold shadow-[0_16px_40px_-14px_rgba(201,169,97,0.7)]"
               >
-                {HERO.primaryCta}
+                {primaryCta}
                 <ArrowRight className="ml-1 w-4 h-4" />
               </Button>
               <Button
@@ -54,12 +66,12 @@ const Hero = () => {
                 className="h-12 px-6 bg-transparent border-white/20 text-white hover:bg-white/5 hover:text-gold hover:border-gold/40"
               >
                 <Play className="mr-1 w-4 h-4" />
-                {HERO.secondaryCta}
+                {secondaryCta}
               </Button>
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-3 sm:gap-5 max-w-xl">
-              {HERO.stats.map((s) => (
+              {stats.map((s) => (
                 <div
                   key={s.label}
                   className="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur px-4 py-4"

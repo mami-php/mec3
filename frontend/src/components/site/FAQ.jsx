@@ -1,8 +1,11 @@
 import React from 'react';
 import { FAQ_GROUPS } from '../../mock';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { useSiteCollection } from '../../lib/cms';
 
 const FAQ = () => {
+  const { items } = useSiteCollection('/site/faqs');
+  const list = items.length > 0 ? items : FAQ_GROUPS;
   return (
     <section id="sss" className="relative py-24 lg:py-32 bg-ink-2/40 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-5 lg:px-8">
@@ -17,7 +20,7 @@ const FAQ = () => {
         </div>
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {FAQ_GROUPS.map((group) => (
+          {list.map((group) => (
             <div key={group.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
               <h3 className="font-display font-bold text-lg text-gold">{group.title}</h3>
               <Accordion type="single" collapsible className="mt-4">

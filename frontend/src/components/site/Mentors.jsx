@@ -1,9 +1,12 @@
 import React from 'react';
 import { ArrowRight, GraduationCap } from 'lucide-react';
 import { MENTORS } from '../../mock';
+import { useSiteCollection } from '../../lib/cms';
 
 const Mentors = () => {
-  const doubled = [...MENTORS, ...MENTORS];
+  const { items } = useSiteCollection('/site/mentors');
+  const list = items.length > 0 ? items : MENTORS;
+  const doubled = [...list, ...list];
   return (
     <section id="mentorlar" className="relative py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">

@@ -1,8 +1,11 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { TESTIMONIALS } from '../../mock';
+import { useSiteCollection } from '../../lib/cms';
 
 const Testimonials = () => {
+  const { items } = useSiteCollection('/site/testimonials');
+  const list = items.length > 0 ? items : TESTIMONIALS;
   return (
     <section className="relative py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-5 lg:px-8">
@@ -17,7 +20,7 @@ const Testimonials = () => {
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((t, i) => (
+          {list.map((t, i) => (
             <figure
               key={i}
               className="relative rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-7 card-lift hover:border-gold/40"
