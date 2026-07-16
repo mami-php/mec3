@@ -32,11 +32,11 @@ export const HERO = {
   ],
   championsTitle: 'YKS Şampiyonlarımız',
   champions: [
-    { name: 'Ahmet Eren Özyurtseven', rank: 'YKS’de 1.', img: 'https://images.unsplash.com/photo-1747576686293-91704fd09949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
-    { name: 'Zeynep Sude Öztürk', rank: 'YKS’de 1906.', img: 'https://images.unsplash.com/photo-1608453162650-cba45689c284?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
-    { name: 'Beril Özer', rank: 'YKS’de 1700.', img: 'https://images.unsplash.com/photo-1700680056772-adfd5f82820f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHw0fHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
-    { name: 'Akif Uyaroğlu', rank: 'YKS’de 1029.', img: 'https://images.unsplash.com/photo-1764522912853-7e53b866e703?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
-    { name: 'Ebrar Metin', rank: 'YKS’de 1119.', img: 'https://images.unsplash.com/photo-1637589381587-f8f416046fb4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
+    { name: 'Ahmet Eren Özyurtseven', rank: 'YKS’de 1.', img: 'https://images.unsplash.com/photo-1611695434398-4f4b330623e6?w=600&h=800&fit=crop&crop=faces&q=80' },
+    { name: 'Zeynep Sude Öztürk', rank: 'YKS’de 1906.', img: 'https://images.unsplash.com/photo-1612203304476-2ed23c55b5b9?w=600&h=800&fit=crop&crop=faces&q=80' },
+    { name: 'Beril Özer', rank: 'YKS’de 1700.', img: 'https://images.unsplash.com/photo-1526342189144-aa78e49e68b4?w=600&h=800&fit=crop&crop=faces&q=80' },
+    { name: 'Akif Uyaroğlu', rank: 'YKS’de 1029.', img: 'https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=600&h=800&fit=crop&crop=faces&q=80' },
+    { name: 'Ebrar Metin', rank: 'YKS’de 1119.', img: 'https://images.unsplash.com/photo-1781705117078-dbd54fd9f597?w=600&h=800&fit=crop&crop=faces&q=80' },
   ],
 };
 
@@ -253,23 +253,23 @@ export const PACKAGES = {
 };
 
 export const MENTORS = [
-  { name: 'Elif Aydın', role: 'YKS Derece Koçu • Tıp', img: 'https://images.unsplash.com/photo-1608453162650-cba45689c284?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Mehmet Kaya', role: 'AYT Uzmanı • Boğaziçi Ünv.', img: 'https://images.unsplash.com/photo-1764522912853-7e53b866e703?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Zeynep Demir', role: 'Uzman PDR Danışmanı', img: 'https://images.unsplash.com/photo-1700680056772-adfd5f82820f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHw0fHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Ahmet Yılmaz', role: 'TYT Koçu • ODTÜ', img: 'https://images.unsplash.com/photo-1718803244477-7889e48c1b6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Selin Öz', role: 'LGS Koçu • Yıldız Teknik', img: 'https://images.unsplash.com/photo-1637589381587-f8f416046fb4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Kaan Doğan', role: 'SAY Derece Koçu • Hacettepe Tıp', img: 'https://images.unsplash.com/photo-1783878734491-8191b48525ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Rabia Şahin', role: 'EA Koçu • İstanbul Hukuk', img: 'https://images.unsplash.com/photo-1738831811837-d202b8db8df5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Emre Polat', role: 'YKS Matematik Koçu', img: 'https://images.unsplash.com/photo-1747576686293-91704fd09949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Elif Aydın', role: 'YKS Derece Koçu • Tıp', img: 'https://images.unsplash.com/photo-1740512380326-12ea7fc64c53?w=600&h=800&fit=crop&crop=faces&q=80' },
+  { name: 'Mehmet Kaya', role: 'AYT Uzmanı • Boğaziçi Ünv.', img: 'https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?w=600&h=800&fit=crop&crop=faces&q=80' },
+  { name: 'Zeynep Demir', role: 'Uzman PDR Danışmanı', img: 'https://images.unsplash.com/photo-1613299469603-6e629423af83?w=600&h=800&fit=crop&crop=faces&q=80' },
+  { name: 'Ahmet Yılmaz', role: 'TYT Koçu • ODTÜ', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=800&fit=crop&crop=faces&q=80' },
+  { name: 'Selin Öz', role: 'LGS Koçu • Yıldız Teknik', img: 'https://images.unsplash.com/photo-1526342189144-aa78e49e68b4?w=600&h=800&fit=crop&crop=faces&q=80' },
+  { name: 'Kaan Doğan', role: 'SAY Derece Koçu • Hacettepe Tıp', img: 'https://images.unsplash.com/photo-1587397845856-e6cf49176c70?w=600&h=800&fit=crop&crop=faces&q=80' },
+  { name: 'Rabia Şahin', role: 'EA Koçu • İstanbul Hukuk', img: 'https://images.unsplash.com/photo-1612203304476-2ed23c55b5b9?w=600&h=800&fit=crop&crop=faces&q=80' },
+  { name: 'Emre Polat', role: 'YKS Matematik Koçu', img: 'https://images.unsplash.com/photo-1611695434398-4f4b330623e6?w=600&h=800&fit=crop&crop=faces&q=80' },
 ];
 
 export const SUCCESS_STORIES = [
-  { name: 'Ahmet Yılmaz Kaya', field: 'SAY', rank: '10.847', tyt: '85 / 102', ayt: '57 / 74', dept: 'Moleküler Biyoloji ve Genetik', img: 'https://images.unsplash.com/photo-1747576686293-91704fd09949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Mehmet Can Demir', field: 'SAY', rank: '98.652', tyt: '53 / 70', ayt: '35 / 52', dept: 'Mimarlık', img: 'https://images.unsplash.com/photo-1764522912853-7e53b866e703?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Zeynep Nur Çelik', field: 'SÖZ', rank: '8.365', tyt: '60 / 85', ayt: '28 / 45', dept: 'Radyo, Televizyon ve Sinema', img: 'https://images.unsplash.com/photo-1738831811837-d202b8db8df5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Burak Öztürk', field: 'EA', rank: '2.154', tyt: '64 / 89', ayt: '45 / 64', dept: 'Hukuk', img: 'https://images.unsplash.com/photo-1718803244477-7889e48c1b6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Merve Sena Doğan', field: 'EA', rank: '7.486', tyt: '60 / 79', ayt: '40 / 59', dept: 'Psikoloji', img: 'https://images.unsplash.com/photo-1608453162650-cba45689c284?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Kerem Arslan', field: 'SAY', rank: '4.315', tyt: '59 / 64', ayt: '35 / 50', dept: 'Beslenme ve Diyetetik', img: 'https://images.unsplash.com/photo-1783878734491-8191b48525ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Ahmet Yılmaz Kaya', field: 'SAY', rank: '10.847', tyt: '85 / 102', ayt: '57 / 74', dept: 'Moleküler Biyoloji ve Genetik', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=1000&fit=crop&crop=faces&q=80' },
+  { name: 'Mehmet Can Demir', field: 'SAY', rank: '98.652', tyt: '53 / 70', ayt: '35 / 52', dept: 'Mimarlık', img: 'https://images.unsplash.com/photo-1587397845856-e6cf49176c70?w=800&h=1000&fit=crop&crop=faces&q=80' },
+  { name: 'Zeynep Nur Çelik', field: 'SÖZ', rank: '8.365', tyt: '60 / 85', ayt: '28 / 45', dept: 'Radyo, Televizyon ve Sinema', img: 'https://images.unsplash.com/photo-1740512380326-12ea7fc64c53?w=800&h=1000&fit=crop&crop=faces&q=80' },
+  { name: 'Burak Öztürk', field: 'EA', rank: '2.154', tyt: '64 / 89', ayt: '45 / 64', dept: 'Hukuk', img: 'https://images.unsplash.com/flagged/photo-1595514191830-3e96a518989b?w=800&h=1000&fit=crop&crop=faces&q=80' },
+  { name: 'Merve Sena Doğan', field: 'EA', rank: '7.486', tyt: '60 / 79', ayt: '40 / 59', dept: 'Psikoloji', img: 'https://images.unsplash.com/photo-1613299469603-6e629423af83?w=800&h=1000&fit=crop&crop=faces&q=80' },
+  { name: 'Kerem Arslan', field: 'SAY', rank: '4.315', tyt: '59 / 64', ayt: '35 / 50', dept: 'Beslenme ve Diyetetik', img: 'https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=800&h=1000&fit=crop&crop=faces&q=80' },
 ];
 
 export const TESTIMONIALS = [
