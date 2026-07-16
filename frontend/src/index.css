@@ -58,3 +58,21 @@ code {
 
 /* Turkish char-friendly leading */
 .leading-tr { line-height: 1.15; }
+
+/* Reusable dark input class */
+.input {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+}
+.input:focus, .input:focus-visible {
+  outline: none;
+  border-color: rgba(201, 169, 97, 0.6);
+  box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.2);
+}
+.input::placeholder { color: rgba(255, 255, 255, 0.3); }
+textarea.input { height: auto; padding: 0.5rem 0.75rem; resize: vertical; }

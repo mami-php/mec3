@@ -48,6 +48,12 @@ const Header = () => {
             <Phone className="w-4 h-4" />
             0 850 000 00 00
           </a>
+          <a
+            href="/login"
+            className="px-4 py-2 rounded-lg text-sm font-semibold text-white border border-white/15 hover:border-gold/40 hover:text-gold transition-colors"
+          >
+            Giriş Yap
+          </a>
           <Button
             className="bg-gold hover:bg-gold-light text-ink font-semibold shadow-[0_10px_28px_-10px_rgba(201,169,97,0.7)]"
           >
@@ -86,6 +92,9 @@ const Header = () => {
             <Button className="mt-6 w-full bg-gold hover:bg-gold-light text-ink font-semibold">
               Ücretsiz Görüşme
             </Button>
+            <a href="/login" className="mt-3 block text-center px-4 py-2.5 rounded-lg text-sm font-semibold text-white border border-white/15 hover:border-gold/40 hover:text-gold transition-colors">
+              Giriş Yap
+            </a>
           </SheetContent>
         </Sheet>
       </div>
