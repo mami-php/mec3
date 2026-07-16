@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:wght@600;700;800;900&family=Caveat:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0a1e3f;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    --background: 217 72% 14%;
+    --foreground: 0 0% 98%;
+    --card: 217 62% 18%;
+    --card-foreground: 0 0% 98%;
+    --popover: 217 62% 18%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 41 51% 59%;
+    --primary-foreground: 217 72% 14%;
+    --secondary: 217 45% 22%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 217 40% 25%;
+    --muted-foreground: 41 20% 78%;
+    --accent: 41 51% 59%;
+    --accent-foreground: 217 72% 14%;
+    --destructive: 0 74% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 40% 25%;
+    --input: 217 40% 25%;
+    --ring: 41 51% 59%;
+    --chart-1: 41 51% 59%;
+    --chart-2: 217 45% 40%;
+    --chart-3: 0 0% 98%;
+    --chart-4: 41 40% 45%;
+    --chart-5: 217 30% 60%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* Custom font classes */
+.font-display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; }
+.font-hand { font-family: 'Caveat', cursive; }
+
+/* Turkish char-friendly leading */
+.leading-tr { line-height: 1.15; }
