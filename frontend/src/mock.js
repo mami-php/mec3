@@ -11,17 +11,32 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  eyebrow: 'YKS • LGS • MAARİF',
+  eyebrow: 'YKS • LGS • KPSS',
   titleGold: 'Koçum Sınav',
   titleWhite: 'İçerikleri!',
   subtitle:
     'Derece yapmış koçlar, uzman PDR danışmanları ve kişiye özel çalışma planlarıyla hedef sıralamana ulaş. Sınavını şansa bırakma; sürecini kontrol altına al.',
-  primaryCta: 'Ücretsiz Tanıtım Görüşmesi',
+  primaryCta: 'Ücretsiz Görüşme Planla',
   secondaryCta: 'Paketleri İncele',
   stats: [
     { value: '1.500+', label: 'Başarı Hikayesi' },
     { value: '40+', label: 'Uzman Koç' },
     { value: '%98', label: 'Memnuniyet' },
+  ],
+  badges: [
+    { label: 'Birebir Koçluk', color: '#1a3a8a', text: '#ffffff', icon: 'Users' },
+    { label: 'Kişisel Planlama', color: '#2f9d6f', text: '#ffffff', icon: 'CalendarClock' },
+    { label: 'Deneme Kulübü', color: '#e05252', text: '#ffffff', icon: 'PackageOpen' },
+    { label: 'Kamp Videoları', color: '#3aa1e0', text: '#ffffff', icon: 'MonitorPlay' },
+    { label: 'Günlük Takip', color: '#e6b13a', text: '#0a1e3f', icon: 'MessageSquare' },
+  ],
+  championsTitle: 'YKS Şampiyonlarımız',
+  champions: [
+    { name: 'Ahmet Eren Özyurtseven', rank: 'YKS’de 1.', img: 'https://images.unsplash.com/photo-1747576686293-91704fd09949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
+    { name: 'Zeynep Sude Öztürk', rank: 'YKS’de 1906.', img: 'https://images.unsplash.com/photo-1608453162650-cba45689c284?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
+    { name: 'Beril Özer', rank: 'YKS’de 1700.', img: 'https://images.unsplash.com/photo-1700680056772-adfd5f82820f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHw0fHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
+    { name: 'Akif Uyaroğlu', rank: 'YKS’de 1029.', img: 'https://images.unsplash.com/photo-1764522912853-7e53b866e703?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
+    { name: 'Ebrar Metin', rank: 'YKS’de 1119.', img: 'https://images.unsplash.com/photo-1637589381587-f8f416046fb4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
   ],
 };
 
@@ -62,7 +77,7 @@ export const FEATURES = [
   },
 ];
 
-export const EXAM_TABS = ['YKS', 'LGS', 'Maarif', 'Ortaokul'];
+export const EXAM_TABS = ['YKS', 'LGS', 'KPSS', 'Ortaokul'];
 
 export const PACKAGES = {
   YKS: [
@@ -169,21 +184,53 @@ export const PACKAGES = {
       accent: false,
     },
   ],
-  Maarif: [
+  KPSS: [
     {
-      name: 'Maarif Koçluk',
-      subtitle: 'Yeni Müfredat Uyumlu',
-      priceOld: '4.499',
-      price: '2.999',
+      name: 'KPSS Bire Bir Koçluk',
+      subtitle: 'Genel Yetenek + Genel Kültür',
+      priceOld: '5.999',
+      price: '3.999',
       unit: '₺ / 4 Hafta',
       features: [
-        'MEB Müfredatına %100 Uyumlu',
-        'Kişiye Özel Program',
-        'Haftalık Görüşme',
+        'Sınav Uzmanı Koç',
+        'Haftalık Canlı Görüşme',
+        'Kişisel Çalışma Programı',
+        'Deneme Analizi',
         'App Erişimi',
       ],
-      cta: 'Başla',
+      cta: 'Koçluk Başlat',
       accent: true,
+    },
+    {
+      name: 'KPSS Deneme Kulübü',
+      subtitle: 'Aylık',
+      priceOld: '1.699',
+      price: '1.199',
+      unit: '₺ / 4 Hafta',
+      features: [
+        '6 Genel Deneme',
+        'Video Çözümler',
+        'Detaylı Net Analizi',
+        'App Erişimi',
+      ],
+      cta: 'Kulübe Katıl',
+      accent: false,
+    },
+    {
+      name: 'KPSS Kombo',
+      subtitle: 'Koçluk + Deneme',
+      priceOld: '7.199',
+      price: '4.699',
+      unit: '₺ / 4 Hafta',
+      features: [
+        'Kişisel KPSS Koçu',
+        '6 KPSS Denemesi + Video Çözüm',
+        'Sınırsız Mesajlaşma',
+        'Detaylı Analiz Karnesi',
+        'Öğretmenlik / A Grubu Odaklı',
+      ],
+      cta: 'Avantajlı Paketi Al',
+      accent: false,
     },
   ],
   Ortaokul: [
@@ -206,23 +253,23 @@ export const PACKAGES = {
 };
 
 export const MENTORS = [
-  { name: 'Elif Aydın', role: 'YKS Derece Koçu • Tıp', img: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxzbWlsaW5nJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg0MjM3MDc1fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Mehmet Kaya', role: 'AYT Uzmanı • Boğaziçi Ünv.', img: 'https://images.unsplash.com/photo-1544168190-79c17527004f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHw0fHx1bml2ZXJzaXR5JTIwbWVudG9yfGVufDB8fHx8MTc4NDIzNzA2NXww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Zeynep Demir', role: 'Uzman PDR Danışmanı', img: 'https://images.unsplash.com/photo-1611695434369-a8f5d76ceb7b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwzfHxzbWlsaW5nJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg0MjM3MDc1fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Ahmet Yılmaz', role: 'TYT Koçu • ODTÜ', img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODQyMzcwNjV8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Selin Öz', role: 'LGS Koçu • Yıldız Teknik', img: 'https://images.unsplash.com/photo-1562337404-3044c84ac061?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwyfHxzbWlsaW5nJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg0MjM3MDc1fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Kaan Doğan', role: 'SAY Derece Koçu • Hacettepe Tıp', img: 'https://images.unsplash.com/photo-1627161683077-e34782c24d81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3ODQyMzcwNjV8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Rabia Şahin', role: 'EA Koçu • İstanbul Hukuk', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwzfHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg0MjM3MDY1fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Emre Polat', role: 'YKS Matematik Koçu', img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg0MjM3MDY1fDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Elif Aydın', role: 'YKS Derece Koçu • Tıp', img: 'https://images.unsplash.com/photo-1608453162650-cba45689c284?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Mehmet Kaya', role: 'AYT Uzmanı • Boğaziçi Ünv.', img: 'https://images.unsplash.com/photo-1764522912853-7e53b866e703?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Zeynep Demir', role: 'Uzman PDR Danışmanı', img: 'https://images.unsplash.com/photo-1700680056772-adfd5f82820f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHw0fHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
+  { name: 'Ahmet Yılmaz', role: 'TYT Koçu • ODTÜ', img: 'https://images.unsplash.com/photo-1718803244477-7889e48c1b6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Selin Öz', role: 'LGS Koçu • Yıldız Teknik', img: 'https://images.unsplash.com/photo-1637589381587-f8f416046fb4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
+  { name: 'Kaan Doğan', role: 'SAY Derece Koçu • Hacettepe Tıp', img: 'https://images.unsplash.com/photo-1783878734491-8191b48525ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Rabia Şahin', role: 'EA Koçu • İstanbul Hukuk', img: 'https://images.unsplash.com/photo-1738831811837-d202b8db8df5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
+  { name: 'Emre Polat', role: 'YKS Matematik Koçu', img: 'https://images.unsplash.com/photo-1747576686293-91704fd09949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
 ];
 
 export const SUCCESS_STORIES = [
-  { name: 'Ahmet Yılmaz Kaya', field: 'SAY', rank: '10.847', tyt: '85 / 102', ayt: '57 / 74', dept: 'Moleküler Biyoloji ve Genetik', img: 'https://images.unsplash.com/photo-1607013407627-6ee814329547?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwc3VjY2Vzc3xlbnwwfHx8fDE3ODQyMzcxMTd8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Mehmet Can Demir', field: 'SAY', rank: '98.652', tyt: '53 / 70', ayt: '35 / 52', dept: 'Mimarlık', img: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwc3R1ZHlpbmd8ZW58MHx8fHwxNzg0MDg3OTA5fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Zeynep Nur Çelik', field: 'SÖZ', rank: '8.365', tyt: '60 / 85', ayt: '28 / 45', dept: 'Radyo, Televizyon ve Sinema', img: 'https://images.unsplash.com/photo-1593698054469-2bb6fdf4b512?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHw0fHxzdHVkZW50JTIwc3R1ZHlpbmd8ZW58MHx8fHwxNzg0MDg3OTA5fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Burak Öztürk', field: 'EA', rank: '2.154', tyt: '64 / 89', ayt: '45 / 64', dept: 'Hukuk', img: 'https://images.unsplash.com/photo-1624727828618-ee42ef2ec5cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxzdHVkZW50JTIwc3VjY2Vzc3xlbnwwfHx8fDE3ODQyMzcxMTd8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Merve Sena Doğan', field: 'EA', rank: '7.486', tyt: '60 / 79', ayt: '40 / 59', dept: 'Psikoloji', img: 'https://images.pexels.com/photos/4778660/pexels-photo-4778660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' },
-  { name: 'Kerem Arslan', field: 'SAY', rank: '4.315', tyt: '59 / 64', ayt: '35 / 50', dept: 'Beslenme ve Diyetetik', img: 'https://images.pexels.com/photos/7128661/pexels-photo-7128661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' },
+  { name: 'Ahmet Yılmaz Kaya', field: 'SAY', rank: '10.847', tyt: '85 / 102', ayt: '57 / 74', dept: 'Moleküler Biyoloji ve Genetik', img: 'https://images.unsplash.com/photo-1747576686293-91704fd09949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHw0fHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Mehmet Can Demir', field: 'SAY', rank: '98.652', tyt: '53 / 70', ayt: '35 / 52', dept: 'Mimarlık', img: 'https://images.unsplash.com/photo-1764522912853-7e53b866e703?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Zeynep Nur Çelik', field: 'SÖZ', rank: '8.365', tyt: '60 / 85', ayt: '28 / 45', dept: 'Radyo, Televizyon ve Sinema', img: 'https://images.unsplash.com/photo-1738831811837-d202b8db8df5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxhcmFiJTIwd29tYW4lMjBzdHVkZW50fGVufDB8fHx8MTc4NDIzODM2MHww&ixlib=rb-4.1.0&q=85' },
+  { name: 'Burak Öztürk', field: 'EA', rank: '2.154', tyt: '64 / 89', ayt: '45 / 64', dept: 'Hukuk', img: 'https://images.unsplash.com/photo-1718803244477-7889e48c1b6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Merve Sena Doğan', field: 'EA', rank: '7.486', tyt: '60 / 79', ayt: '40 / 59', dept: 'Psikoloji', img: 'https://images.unsplash.com/photo-1608453162650-cba45689c284?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHx0dXJraXNoJTIwc3R1ZGVudHxlbnwwfHx8fDE3ODQyMzgzNjB8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Kerem Arslan', field: 'SAY', rank: '4.315', tyt: '59 / 64', ayt: '35 / 50', dept: 'Beslenme ve Diyetetik', img: 'https://images.unsplash.com/photo-1783878734491-8191b48525ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxtZWRpdGVycmFuZWFuJTIweW91bmclMjBtYW58ZW58MHx8fHwxNzg0MjM4MzYwfDA&ixlib=rb-4.1.0&q=85' },
 ];
 
 export const TESTIMONIALS = [
@@ -289,27 +336,6 @@ export const FAQ_GROUPS = [
       {
         q: 'Koçumu değiştirebilir miyim?',
         a: 'Kesinlikle. Uyum yakalayamadığını hissedersen sistem üzerinden koç değişikliği talep edebilirsin.',
-      },
-    ],
-  },
-  {
-    title: 'Ödeme & İade',
-    items: [
-      {
-        q: '14 Gün %100 İade Garantisi nasıl işliyor?',
-        a: 'Kayıt olduktan sonraki ilk 14 gün boyunca sistemi dener, koçunla görüşürsün. Bu sistem bana göre değil dersen, hiçbir kesinti veya şart olmadan ödemeni anında %100 iade ederiz.',
-      },
-      {
-        q: 'Taksit imkanı bulunuyor mu?',
-        a: 'Evet. Tüm paketlerimizde anlaşmalı kredi kartlarına vade farksız 9 taksit imkanımız bulunmaktadır.',
-      },
-      {
-        q: 'Paketimi yükseltebilir miyim?',
-        a: 'Tabii. Deneme Kulübü paketle başlayıp, dilediğin zaman aradaki farkı ödeyerek Koçluk paketlerine geçebilirsin.',
-      },
-      {
-        q: 'Aboneliğim otomatik yenileniyor mu?',
-        a: 'Aylık paketler otomatik yenilenir; ancak uygulama içindeki Aboneliğim menüsünden tek tıkla iptal edebilirsin.',
       },
     ],
   },

@@ -100,11 +100,6 @@ const Packages = () => {
             </div>
           ))}
         </div>
-
-        <p className="mt-10 text-center text-sm text-white/50">
-          Tüm paketlerde <span className="text-gold font-semibold">14 gün %100 iade garantisi</span> ve
-          <span className="text-gold font-semibold"> vade farksız 9 taksit</span> imkanı bulunmaktadır.
-        </p>
       </div>
     </section>
   );

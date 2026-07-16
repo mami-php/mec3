@@ -13,7 +13,7 @@ import Testimonials from './components/site/Testimonials';
 import CTAContact from './components/site/CTAContact';
 import FAQ from './components/site/FAQ';
 import Footer from './components/site/Footer';
-import FloatingWhatsApp from './components/site/FloatingWhatsApp';
+import SideCallButton from './components/site/SideCallButton';
 
 const Home = () => {
   useEffect(() => {
@@ -35,7 +35,7 @@ const Home = () => {
         <FAQ />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <SideCallButton />
       <Toaster />
     </div>
   );
