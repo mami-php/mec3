@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"d82f229f45db4b15907e69eba6db5d8a","collectionName":"landing_mentors","type":"collection"}

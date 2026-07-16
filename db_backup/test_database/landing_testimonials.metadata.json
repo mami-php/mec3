@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"c2c57cd7f9fb403db41004c795194296","collectionName":"landing_testimonials","type":"collection"}
